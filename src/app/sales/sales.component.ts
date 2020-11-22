@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
+import {DialogContentComponent} from '../dialog-content/dialog-content.component';
 
 @Component({
   selector: 'app-sales',
@@ -90,12 +91,13 @@ export class SalesComponent implements OnInit {
     this.images.find((i) => {
       if (i.name === item.name) {
         i.availability --;
+        this.openDialog();
       }
     });
   }
 
-  openDialog() {
-    this.dialog.open(DialogElementsExampleDialog);
+  openDialog(): any {
+    this.dialog.open(DialogContentComponent);
   }
 
 }
