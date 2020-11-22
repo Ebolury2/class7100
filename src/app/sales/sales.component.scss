@@ -1,0 +1,14 @@
+.main-div {
+  box-sizing: border-box;
+  width: 100%;
+  background: antiquewhite;
+  min-height: 100vw;
+  border: saddlebrown 20px solid;
+}
+
+.title-container{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: auto;
+}
