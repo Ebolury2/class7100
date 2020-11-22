@@ -1,9 +1,13 @@
 .main-div {
+  display: flex;
   box-sizing: border-box;
   width: 100%;
   background: antiquewhite;
   min-height: 100vw;
   border: saddlebrown 20px solid;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-direction: row;
 }
 
 .title-container{
@@ -11,4 +15,42 @@
   justify-content: center;
   align-content: center;
   margin: auto;
+  flex-direction: row;
+  background: antiquewhite;
+  border-right: saddlebrown 20px solid;
+  border-left: saddlebrown 20px solid;
+  border-top: saddlebrown 20px solid;
+}
+
+.image-class {
+  display: flex;
+  width: 200px;
+  height: 150px;
+  border: 5px solid saddlebrown;
+  padding: .5rem;
+  cursor: pointer;
+}
+
+.item-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 1rem;
+  justify-content: center;
+}
+
+.image-inner-box {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.availability-class {
+  display: inline;
+}
+
+.text-class {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px;
 }

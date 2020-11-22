@@ -1,5 +1,14 @@
+<div class="title-container">
+  <h2> Bolury's Chocolate company</h2>
+</div>
 <div class="main-div">
-  <div class="title-container">
-    <h2> Bolury's Chocolate company</h2>
+  <div class="item-box">
+    <div *ngFor="let img of images">
+      <div class="image-inner-box">
+        <img class="image-class" [src]="img.src" >
+        <span class="text-class">{{'Name: ' + img.name}}</span>
+        <span class="text-class availability-class">{{'Availability: ' + img.availability}}</span>
+      </div>
+    </div>
   </div>
 </div>
