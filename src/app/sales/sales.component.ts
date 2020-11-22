@@ -99,8 +99,9 @@ export class SalesComponent implements OnInit {
 
   openDialog(i: any): void {
     this.dialog.open(DialogContentComponent, {
-      width: '250px',
-      data: {name: i, animal: 'this.animal'}
+      width: '750px',
+      data: {data: i},
+      backdropClass: 'backdropBackground'
     });
   }
 
