@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-sales',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class SalesComponent implements OnInit {
 
   images: any[] = [];
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.images = [
@@ -85,4 +86,18 @@ export class SalesComponent implements OnInit {
     ];
   }
 
+  purchase(item: { name: any; }): void {
+    this.images.find((i) => {
+      if (i.name === item.name) {
+        i.availability --;
+      }
+    });
+  }
+
+  openDialog() {
+    this.dialog.open(DialogElementsExampleDialog);
+  }
+
 }
+
+
