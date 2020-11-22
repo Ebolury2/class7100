@@ -2,6 +2,16 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
 
+## Preparation
+
+###1. clone the repository to your local computer: 
+######git clone https://github.com/Ebolury2/class7100.git 
+or
+######git clone git@github.com:Ebolury2/class7100.git
+###2. cd class7100
+###3. Run: npm install
+###4. Run: ng serve
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
