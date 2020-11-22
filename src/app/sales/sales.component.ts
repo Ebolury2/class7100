@@ -89,19 +89,22 @@ export class SalesComponent implements OnInit {
   }
 
   purchase(item: { name: any; }): void {
-    this.images.find((i) => {
+    this.images.forEach((i) => {
       if (i.name === item.name) {
-        i.availability --;
-        this.openDialog(i);
+        if (i.availability > 0) {
+          i.availability --;
+          this.openDialog(i, 'success');
+        } else if (i.availability === 0) {
+          this.openDialog(i, 'failed');
+        }
       }
     });
   }
 
-  openDialog(i: any): void {
+  openDialog(i: any, statusItem: string): void {
     this.dialog.open(DialogContentComponent, {
       width: '750px',
-      data: {data: i},
-      backdropClass: 'backdropBackground'
+      data: {data: i, status: statusItem},
     });
   }
 

@@ -1,5 +1,15 @@
-<h1 mat-dialog-title>Congratulation!</h1>
-<div mat-dialog-content>You purchased for a '{{data?.data?.name}}' was successful.</div>
-<div mat-dialog-actions>
-  <button mat-button mat-dialog-close>Close</button>
+<div *ngIf="data.status === 'success'" class="modal-container">
+  <h1 mat-dialog-title>Congratulation!</h1>
+  <div mat-dialog-content>You purchased for a '{{data?.data?.name}}' was successful.</div>
+  <div mat-dialog-actions>
+    <button mat-button mat-dialog-close>Close</button>
+  </div>
+</div>
+<div *ngIf="data.status === 'failed'">
+  <h1 mat-dialog-title>Ops! Something is not right.</h1>
+  <div mat-dialog-content>You purchased for a '{{data?.data?.name}}' could not complete.</div>
+  <div mat-dialog-content>Please try again.</div>
+  <div mat-dialog-actions>
+    <button mat-button mat-dialog-close>Close</button>
+  </div>
 </div>

@@ -9,3 +9,11 @@
 .mat-dialog-container {
   background: bisque !important;
 }
+
+.modal-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  margin: auto;
+}
