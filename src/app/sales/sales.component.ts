@@ -10,6 +10,7 @@ import {DialogContentComponent} from '../dialog-content/dialog-content.component
 export class SalesComponent implements OnInit {
 
   images: any[] = [];
+  currentItem: any = '';
   constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
@@ -91,13 +92,16 @@ export class SalesComponent implements OnInit {
     this.images.find((i) => {
       if (i.name === item.name) {
         i.availability --;
-        this.openDialog();
+        this.openDialog(i);
       }
     });
   }
 
-  openDialog(): any {
-    this.dialog.open(DialogContentComponent);
+  openDialog(i: any): void {
+    this.dialog.open(DialogContentComponent, {
+      width: '250px',
+      data: {name: i, animal: 'this.animal'}
+    });
   }
 
 }

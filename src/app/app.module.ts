@@ -6,9 +6,9 @@ import { AppComponent } from './app.component';
 import { SalesComponent } from './sales/sales.component';
 import { InventoryComponent } from './inventory/inventory.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {DialogContentComponent} from './dialog-content/dialog-content.component';
-import {MatDialog, MatDialogRef} from '@angular/material/dialog';
-import {OverlayModule} from '@angular/cdk/overlay';
+import { DialogContentComponent } from './dialog-content/dialog-content.component';
+import {MatDialog, MatDialogModule} from '@angular/material/dialog';
+import { OverlayModule } from '@angular/cdk/overlay';
 
 @NgModule({
   declarations: [
@@ -19,13 +19,13 @@ import {OverlayModule} from '@angular/cdk/overlay';
   ],
   imports: [
     BrowserModule,
+    MatDialogModule,
     OverlayModule,
     AppRoutingModule,
     BrowserAnimationsModule
   ],
   providers: [
     MatDialog,
-    MatDialogRef
   ],
   bootstrap: [AppComponent]
 })
