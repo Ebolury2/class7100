@@ -3,12 +3,12 @@
 </div>
 <div class="main-div">
   <div class="item-box">
-    <div *ngFor="let item of images">
+    <span *ngFor="let item of images" class="ng-for-class">
       <div class="image-inner-box" (click)="purchase(item)">
         <img class="image-class" [src]="item.src" >
         <span class="text-class">{{'Name: ' + item.name}}</span>
         <span class="text-class availability-class">{{'Availability: ' + item.availability}}</span>
       </div>
-    </div>
+    </span>
   </div>
 </div>

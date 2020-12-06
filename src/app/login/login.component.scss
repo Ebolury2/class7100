@@ -2,13 +2,14 @@
   display: flex;
   box-sizing: border-box;
   width: 100%;
-  background: antiquewhite;
+  background: #391C08;
   border: saddlebrown 20px solid;
   align-content: space-between;
   flex-direction: row;
   margin: auto;
   justify-content: center;
   padding: 1rem;
+  height: 67vw;
 }
 
 .title-container{
@@ -62,4 +63,8 @@
 
 .ng-for-class {
   max-height: 300px;
+}
+
+.mat-icon-button {
+  background-color: bisque !important;
 }

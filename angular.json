@@ -129,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "class7100"
+  "defaultProject": "class7100",
+  "cli": {
+    "analytics": "80e5db3e-cf2f-4fb0-ad11-70df99a76255"
+  }
 }

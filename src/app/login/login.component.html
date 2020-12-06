@@ -1,0 +1,48 @@
+
+<div class="title-container">
+  <h2> Bolury's Chocolate company</h2>
+</div>
+<div class="main-div">
+  <div class="item-box">
+    <div class="ng-for-class">
+      <div class="image-inner-box">
+        <form class="example-form">
+          <div class="login-screen">
+            <mat-form-field class="example-full-width login-screen">
+              <mat-label>Enter your user name</mat-label>
+              <input matInput
+                     #name
+                     (keyup)="setValue(name, 'name')"
+                     autocomplete="off"
+                     placeholder="User Name">
+            </mat-form-field>
+          </div>
+
+          <div>
+            <mat-form-field class="example-full-width">
+              <mat-label>Enter your password</mat-label>
+              <input
+                #pass
+                matInput
+                [type]="hide ? 'password' : 'text'"
+                autocomplete="off"
+                (keyup)="setValue(pass, 'pass')"
+                placeholder="Password">
+              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon aria-hidden="true">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+            </mat-form-field>
+          </div>
+          <div>
+            <button
+              mat-raised-button
+              (click)="appLogin()"
+              color="accent">
+                Login
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
